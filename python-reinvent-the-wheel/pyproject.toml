@@ -1,0 +1,29 @@
+
+# Python Reinvent the Wheel
+# Shared development tooling configuration
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",     # pycodestyle errors
+    "F",     # Pyflakes
+    "I",     # Import sorting
+    "B",     # flake8-bugbear
+    "UP",    # pyupgrade
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+    "exercises",
+    "projects",
+]
+python_files = ["test_*.py"]
+addopts = "-ra"
